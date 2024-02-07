@@ -28,7 +28,7 @@ jobs:
         run: mvn clean install
       - name: Build Docker image
         run: |
-          docker build -t spring-boot-docker.jar .
+          docker build -t spring-boot-docker .
           docker tag spring-boot-docker my-docker-registry/spring-boot-docker
 
       - name: Docker Push
