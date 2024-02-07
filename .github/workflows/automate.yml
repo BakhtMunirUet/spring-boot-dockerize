@@ -19,7 +19,7 @@ jobs:
 
 
       - name: Build and test
-        run: ./mvn clean install
+        run: mvn clean install
       - name: Build Docker image
         run: |
           docker build -t spring-boot-docker.jar .
