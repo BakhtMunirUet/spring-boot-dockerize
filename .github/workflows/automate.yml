@@ -28,7 +28,7 @@ jobs:
         run: mvn clean install
       - name: Build Docker image
         run: |
-          docker build -t spring-boot-docker .
+          docker build -t spring-boot-docker . --tag ${{ secrets.DOCKER_USERNAME }}/spring-boot-docker
 
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/spring-boot-docker
