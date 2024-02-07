@@ -29,7 +29,6 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t spring-boot-docker .
-          docker tag spring-boot-docker my-docker-registry/spring-boot-docker
 
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/spring-boot-docker
